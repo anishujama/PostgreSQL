@@ -1,0 +1,194 @@
+1. What is SQL?
+SQL (Structured Query Language) एक standard language है जिसका उपयोग
+database में data को store, retrieve, update और delete करने के लिए किया जाता है।
+यह relational databases जैसे MySQL, Oracle, SQL Server आदि में use होती है.
+
+
+2. Subsets / Types of SQL Commands
+SQL commands को 5 parts में divide किया जाता है:
+
+DDL (Data Definition Language):
+CREATE, ALTER, DROP, TRUNCATE – database structure define करता है
+
+DML (Data Manipulation Language):
+INSERT, UPDATE, DELETE – data को change करता है
+
+DQL (Data Query Language):
+SELECT – data retrieve करता है
+
+DCL (Data Control Language):
+GRANT, REVOKE – permissions control करता है
+
+TCL (Transaction Control Language):
+COMMIT, ROLLBACK, SAVEPOINT – transactions manage करता है
+
+
+3. Sequence of Execution in SQL
+SQL query execution order:
+FROM
+JOIN
+WHERE
+GROUP BY
+HAVING
+SELECT
+ORDER BY
+LIMIT
+
+
+4. Advantages & Disadvantages of SQL
+Advantages:
+- Easy to learn and use
+- Fast data retrieval
+- Handles large amount of data
+- Secure with permissions
+
+Disadvantages:
+- Limited control compared to programming languages
+- Vendor-specific differences
+- Not suitable for complex logic
+
+
+5. What is Database? How to create database in SQL?
+Database is an organized collection of data stored electronically.
+
+Create database:
+CREATE DATABASE database_name;
+
+
+6. What is DBMS?
+DBMS (Database Management System) एक software है जो database को create,
+manage और manipulate करने में help करता है.
+Examples: MySQL, Oracle, SQL Server
+
+
+7. What are Tables and Fields?
+Table: Rows and columns में data store करता है
+Field: Column को field कहा जाता है
+
+
+8. What are Constraints in SQL?
+Constraints rules होते हैं जो data integrity maintain करते हैं.
+Types:
+NOT NULL
+UNIQUE
+PRIMARY KEY
+FOREIGN KEY
+CHECK
+DEFAULT
+
+
+9. What is Primary Key and Foreign Key?
+Primary Key:
+- Uniquely identify a record
+- Cannot be NULL
+
+Foreign Key:
+- One table की primary key को reference करता है
+- Tables के बीच relationship बनाता है
+
+
+10. How to create and delete a table?
+Create table:
+CREATE TABLE student (
+id INT,
+name VARCHAR(50)
+);
+
+Delete table:
+DROP TABLE student;
+
+
+11. What is a TRIGGER in SQL?
+Trigger एक automatic action है जो INSERT, UPDATE या DELETE पर execute होता है.
+
+
+12. How to change a table name in SQL?
+RENAME TABLE old_name TO new_name;
+
+
+13. What is JOIN in SQL? Types of JOIN
+JOIN multiple tables से data combine करता है.
+
+Types:
+INNER JOIN
+LEFT JOIN
+RIGHT JOIN
+FULL JOIN
+CROSS JOIN
+
+
+14. What is Normalization?
+Normalization database design technique है
+जो data redundancy कम करता है और data consistency बढ़ाता है.
+
+
+15. How to insert a date in SQL?
+INSERT INTO table_name (date_column)
+VALUES ('2026-01-10');
+
+
+16. TRUNCATE vs DELETE vs DROP
+DELETE:
+- Specific rows delete करता है
+- WHERE clause allowed
+
+TRUNCATE:
+- All rows delete करता है
+- Faster, cannot rollback
+
+DROP:
+- Table structure + data delete करता है
+
+
+17. Types of SQL Operators
+Arithmetic Operators: +, -, *, /
+Comparison Operators: =, !=, >, <, >=, <=
+Logical Operators: AND, OR, NOT
+Special Operators: BETWEEN, IN, LIKE, IS NULL
+
+
+18. Aggregate and Scalar Functions
+Aggregate Functions:
+COUNT(), SUM(), AVG(), MIN(), MAX()
+
+Scalar Functions:
+UPPER(), LOWER(), LENGTH(), ROUND(), NOW()
+
+
+19. What are Window Functions?
+Window function rows के group पर calculation करता है
+without collapsing rows.
+Examples:
+ROW_NUMBER()
+RANK()
+DENSE_RANK()
+
+
+20. What are Operators? Types with examples
+Operators symbols होते हैं जो operations perform करते हैं.
+
+Example:
+SELECT salary + bonus FROM employee;
+
+
+21. Difference between RANK, DENSE_RANK and ROW_NUMBER
+ROW_NUMBER:
+- Unique number assign करता है
+
+RANK:
+- Same value पर same rank
+- Gap छोड़ता है
+
+DENSE_RANK:
+- Same value पर same rank
+- Gap नहीं छोड़ता
+
+
+22. Clustered vs Non-Clustered Index
+Clustered Index:
+- Table data physically sort होता है
+- One table = one clustered index
+
+Non-Clustered Index:
+- Separate structure बनाता है
+- Multiple allowed
